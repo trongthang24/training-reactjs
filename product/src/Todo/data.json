@@ -1,0 +1,16 @@
+{
+    "todos": [
+        {
+            "id": 1,
+            "task": "hoc reactjs"
+        },
+        {
+            "id": 2,
+            "task": "hoc HTML CSS"
+        },
+        {
+            "id": 1,
+            "task": "hoc Javascript"
+        }
+    ]
+}

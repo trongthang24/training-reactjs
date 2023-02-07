@@ -1,0 +1,32 @@
+.todo {
+    margin: 0 -3rem 4px;
+    padding: 1.1rem 3rem;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.todo button {
+    background: none;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.todo li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo input {
+    width: 87%;
+    height: 40px;
+}
