@@ -1,0 +1,43 @@
+.MovieSchedule {
+    .header {
+        border-bottom: 1px solid #ddd;
+
+        &-logo {
+            background-image: url(../images/logo.jpg);
+            height: 50px;
+            width: 100px;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    .body {
+        background-image: url(../images/bg_cgv.jpg);
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        &-modal {
+            background-color: #301a1a96;
+            height: 60%;
+            width: 60%;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-bottom: 1px solid #000;
+            position: absolute;
+            border-radius: 5px;
+        }
+        .abc {
+            margin-right: 10px;
+        }
+    }
+
+}
+
+.text-grey {
+    color: rgba(#fff, 0.6);
+}
+.text-grey-light {
+    color: rgba(#fff, 0.9);
+}
