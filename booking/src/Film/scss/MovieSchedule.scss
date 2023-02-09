@@ -17,6 +17,7 @@
         background-position: center;
         background-size: cover;
         position: relative;
+
         &-modal {
             background-color: #301a1a96;
             height: 60%;
@@ -28,8 +29,32 @@
             position: absolute;
             border-radius: 5px;
         }
-        .abc {
-            margin-right: 10px;
+
+        .btn {
+            &-time {
+                margin: 5px 5px 5px 0;
+            }
+
+            &-slide {
+                position: absolute;
+                border-color: transparent;
+                color: #fff;
+                padding: 50px 0;
+                background-color: #301a1a88;
+                font-size: 50px;
+                &__left {
+                    top: 50%;
+                    left: 16%
+                }
+
+                &__right {
+                    top: 50%;
+                    right: 16%;
+                }
+                &:hover {
+                    background-color: #160c0cd2;
+                }
+            }
         }
     }
 
@@ -38,6 +63,7 @@
 .text-grey {
     color: rgba(#fff, 0.6);
 }
+
 .text-grey-light {
     color: rgba(#fff, 0.9);
 }

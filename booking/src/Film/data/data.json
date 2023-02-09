@@ -1,7 +1,7 @@
 {
     "films": [
         {
-            "id": 1,
+            "id": "1",
             "name": "Nhà Bà Nữ",
             "thumb": "nhabanu.jpg",
             "nameEng": "THE HOUSE OF NO MAN",
@@ -13,6 +13,18 @@
             "country": "Việt Nam",
             "times": ["17:40 ~ 19:22", "18:25 ~ 20:07", "19:10 ~ 20:52", "19:50 ~ 21:32"]
         },
-
+        {
+            "id": "2",
+            "name": "Chị Chị Em Em 2",
+            "thumb": "chichiemem2.jpg",
+            "nameEng": "Chị Chị Em Em 2",
+            "year": "2022",
+            "duration": "120",
+            "slogan": "Thần thái là vũ khí đầu tiên, cơ thể là vũ khí cuối cùng!",
+            "showDate": "22/01/2023",
+            "genre" : "Chính Kịch,Gay Cấn",
+            "country": "Việt Nam",
+            "times": ["19:40 ~ 21:00", "20:00 ~ 22:00", "22:00 ~ 00:00"]
+        }
     ]
 }

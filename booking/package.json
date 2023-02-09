@@ -20,6 +20,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-scripts": "5.0.1",
+    "react-slideshow-image": "^4.2.0",
     "sass": "^1.58.0",
     "styled-components": "^5.3.6",
     "typescript": "^4.9.5",
@@ -29,7 +30,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "data": "json-server --port 4000 --watch src/Film/data/data.json"
   },
   "eslintConfig": {
     "extends": [

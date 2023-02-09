@@ -1,8 +1,25 @@
-import '../sass/MovieSchedule.scss'
+import '../scss/MovieSchedule.scss'
 import Button from '@mui/material/Button';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Film } from '../type/type';
+import { Fade } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
+import ModalSchedule from './ModalSchedule'
+import InfoMovie from './InfoMovie'
+
 
 function MovieSchedule() {
+    const [open, setOpen] = useState(false);
+    const [films, setFilms] = useState([])
+    
+    useEffect(() => {
+        axios.get('http://localhost:4000/films')
+            .then(res => setFilms(res.data))
+            .catch(err => console.error(err))
+    }, [])
 
+    const handleToggle = () => setOpen(!open);
     return (
         <div className="MovieSchedule">
             <div className="header">
@@ -18,36 +35,12 @@ function MovieSchedule() {
             <div className="body text-white">
                 <div className="body-modal">
                     <div className='body-title font-bold text-5xl'>Lịch chiếu phim <span className="text-red-600 font-extrabold">CGV</span></div>
-                    <div className="body-content flex p-5">
-                        <div className="body-content__thumbnail w-1/4">
-                            <img src={require('../images/nhabanu.jpg')} alt="nhabanu"/>
-                        </div>
-                        <div className="body-content__description text-left pl-5 w-3/4">
-                            <div>
-                                <h1 className='text-4xl font-bold'>Nhà Bà Nữ</h1>
-                                <p className='text-grey'>THE HOUSE OF NO MAN <span>. </span> 2022 <span>. </span>102 phút</p>
-                                <p className='text-grey'>Ai cũng có lỗi, nhưng ai cũng nghĩ mình là nạn nhân..</p>
-                            </div>
-                            <div className='flex pt-5 pb-5'>
-                                <div className='pr-5'>
-                                    <p className='text-grey'>Ngày chiếu</p>
-                                    <p>22/01/2023</p>
-                                </div>
-                                <div className='pr-5'>
-                                    <p className='text-grey'>Thể loại</p>
-                                    <p>Chính Kịch</p>
-                                </div>
-                                <div className='pr-5'>
-                                    <p className='text-grey'>Quốc gia</p>
-                                    <p>Việt Nam</p>
-                                </div>
-                            </div>
-                            <div className='flex'>
-                                <Button variant="contained" color="secondary" className='abc'>Outlined</Button>
-                                <Button variant="contained" color="secondary">Outlined1</Button>
-                            </div>
-                        </div>
-                    </div>
+                    <Fade>
+                        {films.map((film: Film) => (
+                            <InfoMovie film={film} handleToggle={handleToggle}/>
+                        ))}
+                    </Fade>
+                    <ModalSchedule open={open} handleToggle={handleToggle}/>
                 </div>
             </div>
             <div className="footer">this is footer</div>
